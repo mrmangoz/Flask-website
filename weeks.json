@@ -1,44 +1,5 @@
 {
     "Weeks": [
-        {
-            "Days": [
-                {
-                    "date": "2020-02-23",
-                    "UCT_lunch": "50",
-                    "party_beers": "0",
-                    "out_about": "30"
-                },
-                {
-                    "date": "2020-02-24",
-                    "UCT_lunch": "50",
-                    "party_beers": "30",
-                    "out_about": "10"
-                },
-                {
-                    "date": "2020-02-25",
-                    "UCT_lunch": "50",
-                    "party_beers": "0",
-                    "out_about": "0"
-                },
-                {
-                    "date": "2020-02-26",
-                    "UCT_lunch": "35",
-                    "party_beers": "0",
-                    "out_about": "0"
-                },
-                {
-                    "date": "2020-02-27",
-                    "UCT_lunch": "245.0",
-                    "party_beers": "0.0",
-                    "out_about": "100.0"
-                },
-                {
-                    "date": "2020-02-28",
-                    "UCT_lunch": "200.0",
-                    "party_beers": "0",
-                    "out_about": "100.0"
-                }
-            ]
-        }
+        
     ]
 }

@@ -17,6 +17,7 @@ def weekly_spendature(UCT_lunch=0,party_beers=0,out_about=0):
     f = open('current_week.json', "r")
     data = f.read()
     json_obj = json.loads(data)
+    today = str(datetime.date.today())
     temp = json_obj["Days"]
     if json_obj["Days"] == []:
         print("empty")
@@ -93,7 +94,6 @@ def statistics():
 def form():
     form_values = []
     running_totals = weekly_spendature()
-    today = str(datetime.date.today())
     UCT_lunch = 0
     party_beers = 0
     out_about = 0
