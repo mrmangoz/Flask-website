@@ -1,5 +1,14 @@
 {
     "Weeks": [
-        
+        {
+            "Days": [
+                {
+                    "date": "2020-03-02",
+                    "UCT_lunch": "26.5",
+                    "party_beers": "0",
+                    "out_about": "0"
+                }
+            ]
+        }
     ]
 }

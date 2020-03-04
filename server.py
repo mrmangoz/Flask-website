@@ -19,6 +19,7 @@ def weekly_spendature(UCT_lunch=0,party_beers=0,out_about=0):
     json_obj = json.loads(data)
     today = str(datetime.date.today())
     temp = json_obj["Days"]
+    day = len(json_obj["Days"]) - 1
     if json_obj["Days"] == []:
         print("empty")
         temp.append({
@@ -27,12 +28,25 @@ def weekly_spendature(UCT_lunch=0,party_beers=0,out_about=0):
                      "party_beers": "0",
                      "out_about": "0"
         })
+        write_json(json_obj, "current_week.json")
     else:
         for item in json_obj["Days"]:
             #if item["date"] == today:
             UCT_lunch += float(item["UCT_lunch"])
             party_beers += float(item["party_beers"])
             out_about += float(item["out_about"])
+
+        if json_obj["Days"][day]["date"] != today:
+            print(json_obj["Days"][day]["date"], "json last date")
+            print(today, "todays date")
+            temp.append({
+                         "date": today,
+                         "UCT_lunch": "0",
+                         "party_beers": "0",
+                         "out_about": "0"
+            })
+            write_json(json_obj, "current_week.json")
+
     return UCT_lunch, party_beers, out_about
 
 
@@ -100,7 +114,8 @@ def form():
     f = open('current_week.json', "r")
     data = f.read()
     json_obj = json.loads(data)
-    day = len(json_obj["Days"]) -1
+    day = len(json_obj["Days"]) - 1
+
     try:
         #print(request.form['UCT_lunch'], "UCT lunch")
         UCT_lunch += float(request.form['UCT_lunch'])
